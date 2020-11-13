@@ -2,8 +2,16 @@
 
 /*Переменные*/
 :root {
+    /*Цвет текста - тип 1*, текст менюшек, фон футера 1 */
     --tc1: #373A39;
+    /*Цвет текста - тип 2, заголовки, кнопка, разделительные линии*/
+    --tc2: #242121;
+    /*Цвет текста - тип 3*/
+    --tc3:  #777777;
+    /*Цвет фона - тип 1*/
     --bgc1: #F6F8FA;
+    /*Цвет декора, нижние подчеркивания, текст хедера*/
+    --dс1: #FCBB08;
 }
 
 .container {
@@ -57,7 +65,7 @@
 }
 
 .menu__link--active {
-    border-bottom: 2px solid #FCBB08;
+    border-bottom: 2px solid var(--dс1);
 }
 
 .header__content {
@@ -87,42 +95,185 @@
     font-size: 16px;
     text-align: center;
     letter-spacing: 2.74286px;
-    color: #FCBB08;
+    color: var(--dс1);
 }
 
 .about {
     background-color: var(--bgc1);
 }
 
-.about-inner {}
+.about-inner {
+    padding: 140px 15px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
 
-.title {}
+.title {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    font-size: 60px;
+    letter-spacing: -1.65px;
+    color: var(--tc2);
+    padding-bottom: 24px;
+    position: relative;
+}
 
-.about__title {}
+.title::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 60px;
+    height: 4px;
+    background-color: var(--dс1);
+}
 
-.about__text {}
+.about__title {
+    margin-right: 30px;
+    margin-bottom: 80px;
+}
+
+.about__text {
+    max-width: 770px;
+}
+
+.paragraph {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 24px;
+    color: var(--tc1);
+    margin-bottom: 18px;
+}
 
 .expertise {}
 
-.expertise__content {}
+.expertise__inner {
+    padding: 140px 0;
+}
 
-.expertise__content-items {}
+.expertise__title {
+    margin: 0 15px 100px;
+}
 
-.expertise__content-item {}
+.expertise__content {
+    display: flex;
+    margin-bottom: 110px;
+}
 
-.expertise__content-text {}
+.expertise__content-items {
+    min-width: 370px;
+    padding: 0 15px;
+}
 
-.expertise__items {}
+.expertise__content-item {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    line-height: 20px;
+    letter-spacing: 1px;
+    color: var(--tc2);
+    margin-bottom: 28px;
+    border-top: 2px solid #F0F0F0;
+    position: relative;
+}
 
-.expertise__item {}
+.expertise__content-item:nth-child(1):before {
+    content: "";
+    position: absolute;
+    top: -2px;
+    left: 0;
+    width: 90%;
+    height: 2px;
+    background-color: var(--tc2);
+}
 
-.expertise__item-img {}
+.expertise__content-item:nth-child(1):after {
+    content: "90%";
+    position: absolute;
+    top: -2px;
+    left: calc(90% - 8px);
+}
+
+.expertise__content-item:nth-child(2):before {
+    content: "";
+    position: absolute;
+    top: -2px;
+    left: 0;
+    width: 80%;
+    height: 2px;
+    background-color: var(--tc2);
+}
+
+.expertise__content-item:nth-child(2):after {
+    content: "80%";
+    position: absolute;
+    top: -2px;
+    left: calc(80% - 8px);
+}
+
+.expertise__content-item:nth-child(3):before {
+    content: "";
+    position: absolute;
+    top: -2px;
+    left: 0;
+    width: 85%;
+    height: 2px;
+    background-color: var(--tc2);
+}
+
+.expertise__content-item:nth-child(3):after {
+    content: "85%";
+    position: absolute;
+    top: -2px;
+    left: calc(85% - 8px);
+}
+
+.expertise__content-text {
+    padding: 0 15px;
+}
+
+.expertise__items {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.expertise__item {
+    flex-grow: 1;
+    flex-basis: 300px;
+    margin: 0 15px 40px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.expertise__item-img {
+    width: 50px;
+    height: 50px;
+    margin-right: 35px;
+}
 
 .expertise__item-box {}
 
-.expertise__item-title {}
+.expertise__item-title {
+    font-family: 'Raleway', sans-serif;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 4.29px;
+    color: var(--tc2);
+    margin-bottom: 14px;
+}
 
-.expertise__item-text {}
+.expertise__item-text {
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 24px;
+    color: var(--tc3);
+}
 
 .vision {}
 

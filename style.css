@@ -1,0 +1,243 @@
+@import "./normalize.css";
+
+/*Переменные*/
+:root {
+    --tc1: #373A39;
+    --bgc1: #F6F8FA;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.header {
+    height: 100vh;
+    background: url(./images/header-bg.jpg) no-repeat center center / cover;
+}
+
+.header__top {
+    min-height: 94px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 50px;
+    background-color: white;
+}
+
+.logo__link {
+    width: 42px;
+    height: 42px;
+    display: inline-block;
+    background: url('./images/logo.svg') no-repeat center center / contain;
+}
+
+.menu {
+    max-width: 600px;
+    flex-grow: 1;
+}
+
+.menu__list {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.menu__link {
+    font-family: 'Raleway', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: 0.6px;
+    color: var(--tc1);
+    text-decoration: none;
+    padding: 12px 7px;
+}
+
+.menu__link--active {
+    border-bottom: 2px solid #FCBB08;
+}
+
+.header__content {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header__content-inner {
+    margin-bottom: 60px;
+}
+
+.header__content-title {
+    margin: 0;
+    margin-bottom: 30px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    font-size: 100px;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.header__content-description {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    font-size: 16px;
+    text-align: center;
+    letter-spacing: 2.74286px;
+    color: #FCBB08;
+}
+
+.about {
+    background-color: var(--bgc1);
+}
+
+.about-inner {}
+
+.title {}
+
+.about__title {}
+
+.about__text {}
+
+.expertise {}
+
+.expertise__content {}
+
+.expertise__content-items {}
+
+.expertise__content-item {}
+
+.expertise__content-text {}
+
+.expertise__items {}
+
+.expertise__item {}
+
+.expertise__item-img {}
+
+.expertise__item-box {}
+
+.expertise__item-title {}
+
+.expertise__item-text {}
+
+.vision {}
+
+.vision__inner {}
+
+.vision__title {}
+
+.vision__text {}
+
+.portfolio {}
+
+.portfolio__head {}
+
+.portfolio__nav {}
+
+.portfolio__nav-list {}
+
+.portfolio__nuv-item {}
+
+.portfolio__nuv-link {}
+
+.portfolio__nuv-link--active {}
+
+.portfolio__items {}
+
+.portfolio__item-img {}
+
+.portfolio__item-title {}
+
+.portfolio__item-descr {}
+
+.portfolio__button {}
+
+.video {}
+
+.video__quotes {}
+
+.video__quotes-autor {}
+
+.video__content {}
+
+.statistics {}
+
+.statistics__inner {}
+
+.statistics__item {}
+
+.statistics__item-num {}
+
+.statistics__item-text {}
+
+.slider {}
+
+.slider__item {}
+
+.slider__item-title {}
+
+.slider__item-text {}
+
+.team {}
+
+.team__items {}
+
+.team__item {}
+
+.team__item-img {}
+
+.team__item-name {}
+
+.team__item-position {}
+
+.pricing {}
+
+.pricing__items {}
+
+.pricing__item {}
+
+.pricing__item-name {}
+
+.pricing__item-rate {}
+
+.pricing__list {}
+
+.pricing__list-item {}
+
+.pricing__btn {}
+
+.contact {}
+
+.contact__content {}
+
+.contact__form {}
+
+.contact__form-input {}
+
+.contact__form-textarea {}
+
+.contact__form-btn {}
+
+.contact__map {}
+
+.footer {}
+
+.footer__content {}
+
+.logo--line {}
+
+.footer__social {}
+
+.footer__social-link {}
+
+.footer__adress {}
+
+.footer__phone {}
+
+.footer__email {}
+
+.footer__copy {}

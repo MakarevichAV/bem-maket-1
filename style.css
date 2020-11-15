@@ -657,21 +657,100 @@
     color: #C2C2C2;
 }
 
-.pricing {}
+.pricing {
+    padding: 140px 0 160px;
+    background-color: var(--bgc1);
+}
 
-.pricing__items {}
+.pricing__title {
+    margin: 0 15px;
+    margin-bottom: 90px;
+}
 
-.pricing__item {}
+.pricing__items {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
 
-.pricing__item-name {}
+.pricing__item {
+    flex-grow: 1;
+    margin: 0 15px 30px;
+    flex-basis: 270px;
+    max-width: 370px;
+    padding: 25px;
+    background: white;
+    font-family: 'Open Sans', sans-serif;
+    display: flex;
+    flex-direction: column;
+}
 
-.pricing__item-rate {}
+.pricing__item-name {
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 22px;
+    color: var(--tc2);
+    margin-bottom: 30px;
+}
 
-.pricing__list {}
+.pricing__item-rate {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+    font-size: 80px;
+    line-height: 80px;
+    text-align: center;
+    color: var(--tc2);
+    margin: 0 auto;
+    margin-bottom: 50px;
+    position: relative;
+}
 
-.pricing__list-item {}
+.pricing__item-rate::before {
+    content: "$";
+    position: absolute;
+    font-weight: 300;
+    font-size: 40px;
+    line-height: 40px;
+    top: 10px;
+    left: -28px;
+}
 
-.pricing__btn {}
+.pricing__item-rate::after {
+    content: "/ mo";
+    position: absolute;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 20px;
+    bottom: 10px;
+    right: -42px;
+}
+
+.pricing__list {
+    margin-bottom: 70px;
+}
+
+.pricing__list-item {
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 22px;
+    text-align: center;
+    color: var(--tc2);
+    margin-bottom: 30px;
+}
+
+.pricing__btn {
+    display: block;
+    margin: 0 auto;
+    background-color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 17px;
+    text-align: center;
+    letter-spacing: 1.2px;
+    color: var(--tc2);
+    margin-bottom: 30px;
+}
 
 .contact {}
 

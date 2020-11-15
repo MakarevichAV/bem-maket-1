@@ -394,13 +394,14 @@
 
 .portfolio__title {
     margin-right: 50px;
+    margin-bottom: 35px;
 }
 
 .portfolio__head {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 110px 15px;
+    padding: 110px 15px 75px;
 }
 
 .portfolio__nav {}
@@ -1012,6 +1013,7 @@
 
     .portfolio__head {
         position: relative;
+        flex-wrap: wrap;
     }
 
     .portfolio__nav-list {
@@ -1023,6 +1025,7 @@
         z-index: 1;
         background-color: var(--bgc1);
         height: 0;
+        transition: 0.3s;
         overflow: hidden;
     }
 

@@ -76,11 +76,11 @@ let menuSelect = document.querySelector('.menu__select'),
     portfolioNavItems = document.querySelectorAll('.portfolio__nav-item'),
     menuSelectOption = document.querySelector('.menu__select-option');
 
-
-
 document.addEventListener('click', (e) => {
-    if (e.target === menuSelect) {
-        portfolioNavList.style.height = 'initial';
+    if (e.target === menuSelect || 
+            e.target === menuSelectArrow ||
+            e.target === menuSelectOption) {
+        portfolioNavList.style.height = '100%';
         menuSelectArrow.innerHTML = '&#9650;';
     } else {
         portfolioNavList.style.height = '0';

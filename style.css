@@ -21,6 +21,7 @@
 
 .header {
     overflow: hidden;
+    position: relative;
     height: 100vh;
     background: url(./images/header-bg.jpg) no-repeat center center / cover;
 }
@@ -95,6 +96,7 @@
     background-color: var(--bgc1);
     top: 0;
     right: -100%;
+    transition: 0.2s;
     bottom: 0;
     width: 100%;
     padding: 94px 15px;
@@ -180,6 +182,7 @@
 .about-inner {
     padding: 140px 15px;
     display: flex;
+    flex-wrap: wrap;
     align-items: flex-start;
     justify-content: space-between;
 }
@@ -211,6 +214,8 @@
 
 .about__text {
     max-width: 770px;
+    flex-grow: 1;
+    flex-basis: 370px;
 }
 
 .paragraph {
@@ -234,6 +239,7 @@
 
 .expertise__content {
     display: flex;
+    flex-wrap: wrap;
     margin-bottom: 110px;
 }
 
@@ -307,6 +313,8 @@
 
 .expertise__content-text {
     padding: 0 15px;
+    flex-grow: 1;
+    flex-basis: 370px;
 }
 
 .expertise__items {
@@ -384,6 +392,10 @@
 
 .portfolio {}
 
+.portfolio__title {
+    margin-right: 50px;
+}
+
 .portfolio__head {
     display: flex;
     align-items: center;
@@ -395,25 +407,27 @@
 
 .portfolio__nav-list {
     display: flex;
+    width: 100%;
+    height: initial;
     align-items: center;
     justify-content: space-between;
 }
 
-.portfolio__nuv-item {}
+.portfolio__nav-item {}
 
-.portfolio__nuv-link {
+.portfolio__nav-link {
     font-family: 'Raleway', sans-serif;
     font-style: normal;
     font-weight: bold;
     font-size: 12px;
-    line-height: 14px;
     letter-spacing: 0.6px;
     color: var(--tc1);
     text-decoration: none;
     padding: 12px 7px;
+    margin: 0 10px;
 }
 
-.portfolio__nuv-link--active {
+.portfolio__nav-link--active {
     border-bottom: 2px solid var(--dс1);
 }
 
@@ -967,11 +981,61 @@
     color: #CCCCCC;
 }
 
+.menu__select {
+    font-size: 30px;
+    width: 300px;
+    padding: 8px 30px;
+    display: none;
+    color: var(--tc1);
+    justify-content: space-between;
+    border-bottom: 2px solid var(--bgc1);
+    cursor: pointer;
+}
+
+.menu__select-option {
+    font-family: 'Raleway', sans-serif;
+    font-weight: bold;
+}
+
 @media(max-width: 900px) {
     .menu__list {
         display: none;
     }
+
     .menu__btn {
         display: flex;
+    }
+
+    .menu__select {
+        display: flex;
+    }
+
+    .portfolio__head {
+        position: relative;
+    }
+
+    .portfolio__nav-list {
+        display: block;
+        min-width: 300px;
+        width: initial;
+        position: absolute;
+        top: calc(50% + 24px);
+        z-index: 1;
+        background-color: var(--bgc1);
+        height: 0;
+        overflow: hidden;
+    }
+
+    .portfolio__nav-item {
+        padding: 10px 15px;
+        cursor: pointer;
+    }
+
+    .portfolio__nav-link {
+        font-size: 30px;
+    }
+
+    .portfolio__nav-link--active {
+        border: none;
     }
 }

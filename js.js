@@ -30,7 +30,7 @@ arrowRight.addEventListener('click', () => {
         sliderDots[i].classList.remove('slider__dot--active');
         i++;
         sliderItemsContainer.style.transition = '0.5s';
-        sliderItemsContainer.style.left = `-${i}00%`; 
+        sliderItemsContainer.style.left = `-${i}00%`;
     }
     let j = (i === slideItems.length) ? 0 : i;
     sliderDots[j].classList.add('slider__dot--active');
@@ -46,7 +46,7 @@ arrowLeft.addEventListener('click', () => {
             arrowLeft.click();
         }, 0);
     } else {
-        i === slideItems.length ? 
+        i === slideItems.length ?
             sliderDots[i - 1].classList.remove('slider__dot--active') :
             sliderDots[i].classList.remove('slider__dot--active');
         i--;
@@ -55,4 +55,41 @@ arrowLeft.addEventListener('click', () => {
     }
     let j = (i === slideItems.length) ? i - 1 : i;
     sliderDots[j].classList.add('slider__dot--active');
+});
+
+// Выплывающее меню
+let menuBtn = document.querySelector('.menu__btn'),
+    menuCrose = document.querySelector('.menu__crose'),
+    menuListMobile = document.querySelector('.menu__list-mobile');
+
+menuBtn.addEventListener('click', () => {
+    menuListMobile.style.right = '0';
+});
+menuCrose.addEventListener('click', () => {
+    menuListMobile.style.right = '-100%';
+});
+
+// Выплывающее меню портфолио
+let menuSelect = document.querySelector('.menu__select'),
+    portfolioNavList = document.querySelector('.portfolio__nav-list'),
+    menuSelectArrow = document.querySelector('.menu__select-arrow'),
+    portfolioNavItems = document.querySelectorAll('.portfolio__nav-item'),
+    menuSelectOption = document.querySelector('.menu__select-option');
+
+
+
+document.addEventListener('click', (e) => {
+    if (e.target === menuSelect) {
+        portfolioNavList.style.height = 'initial';
+        menuSelectArrow.innerHTML = '&#9650;';
+    } else {
+        portfolioNavList.style.height = '0';
+        menuSelectArrow.innerHTML = '&#9660;';
+        portfolioNavItems.forEach((val, ind) => {
+            let link = val.querySelector('.portfolio__nav-link');
+            if (e.target === val || e.target === link) {
+                menuSelectOption.innerHTML = e.target.innerText;               
+            }    
+        })
+    }
 });

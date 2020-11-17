@@ -227,8 +227,6 @@
     margin-bottom: 18px;
 }
 
-.expertise {}
-
 .expertise__inner {
     padding: 140px 0;
 }
@@ -337,8 +335,6 @@
     margin-right: 35px;
 }
 
-.expertise__item-box {}
-
 .expertise__item-title {
     font-family: 'Raleway', sans-serif;
     font-weight: bold;
@@ -390,8 +386,6 @@
     margin-bottom: 65px;
 }
 
-.portfolio {}
-
 .portfolio__title {
     margin-right: 50px;
     margin-bottom: 35px;
@@ -404,8 +398,6 @@
     padding: 110px 15px 75px;
 }
 
-.portfolio__nav {}
-
 .portfolio__nav-list {
     display: flex;
     width: 100%;
@@ -413,8 +405,6 @@
     align-items: center;
     justify-content: space-between;
 }
-
-.portfolio__nav-item {}
 
 .portfolio__nav-link {
     font-family: 'Raleway', sans-serif;
@@ -575,8 +565,6 @@
     height: 324px;
     background: url(./images/poster.jpg) no-repeat center center / cover;
 }
-
-.statistics {}
 
 .statistics__inner {
     padding: 160px 0;
@@ -845,6 +833,7 @@
 
 .contact {
     display: flex;
+    flex-wrap: wrap;
     align-items: stretch;
     justify-content: flex-end;
 }
@@ -856,9 +845,8 @@
 .contact__content {
     padding: 140px 120px 160px;
     flex-grow: 1;
+    flex-basis: 450px;
 }
-
-.contact__form {}
 
 .contact__form-input {
     width: 100%;
@@ -903,9 +891,8 @@
 .contact__map {
     flex-grow: 1;
     min-width: 635px;
+    min-height: 400px;
 }
-
-.footer {}
 
 .footer__content {
     background-color: var(--tc1);
@@ -998,6 +985,26 @@
     font-weight: bold;
 }
 
+.portfolio__items-mobile {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.portfolio__item-mobile-img {
+    height: 300px;
+    flex-grow: 1;
+    flex-basis: 150px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.portfolio__item-mobile-img:hover>* {
+    display: block;
+}
+
 @media(max-width: 900px) {
     .menu__list {
         display: none;
@@ -1016,8 +1023,11 @@
         flex-wrap: wrap;
     }
 
+    .portfolio__nav {
+        position: relative;
+    }
+
     .portfolio__nav-list {
-        display: block;
         min-width: 300px;
         width: initial;
         position: absolute;
@@ -1027,6 +1037,10 @@
         height: 0;
         transition: 0.3s;
         overflow: hidden;
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+        justify-content: center;
     }
 
     .portfolio__nav-item {
@@ -1041,4 +1055,6 @@
     .portfolio__nav-link--active {
         border: none;
     }
+
+    
 }

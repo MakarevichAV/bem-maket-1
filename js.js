@@ -1,7 +1,18 @@
 let portfolioItems = document.querySelector('.portfolio__items');
-portfolioItems.style.height = `${portfolioItems.clientWidth * 0.6333}px`;
-window.addEventListener('resize', () => {
+let portfolioItemsMobile = document.querySelector('.portfolio__items-mobile');
+function portfolioСhanges() {
     portfolioItems.style.height = `${portfolioItems.clientWidth * 0.6333}px`;
+    if (window.innerWidth <= 750) {
+        portfolioItemsMobile.style.display = 'flex';
+        portfolioItems.style.display = 'none';
+    } else {
+        portfolioItemsMobile.style.display = 'none';
+        portfolioItems.style.display = 'flex';
+    }
+}
+portfolioСhanges();
+window.addEventListener('resize', () => {
+    portfolioСhanges();
 });
 
 //slider
@@ -77,10 +88,10 @@ let menuSelect = document.querySelector('.menu__select'),
     menuSelectOption = document.querySelector('.menu__select-option');
 
 document.addEventListener('click', (e) => {
-    if (e.target === menuSelect || 
-            e.target === menuSelectArrow ||
-            e.target === menuSelectOption) {
-        portfolioNavList.style.height = '100%';
+    if (e.target === menuSelect ||
+        e.target === menuSelectArrow ||
+        e.target === menuSelectOption) {
+        portfolioNavList.style.height = '290px';
         menuSelectArrow.innerHTML = '&#9650;';
     } else {
         portfolioNavList.style.height = '0';
@@ -88,8 +99,8 @@ document.addEventListener('click', (e) => {
         portfolioNavItems.forEach((val, ind) => {
             let link = val.querySelector('.portfolio__nav-link');
             if (e.target === val || e.target === link) {
-                menuSelectOption.innerHTML = e.target.innerText;               
-            }    
+                menuSelectOption.innerHTML = e.target.innerText;
+            }
         })
     }
 });
